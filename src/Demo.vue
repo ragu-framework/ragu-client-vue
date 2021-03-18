@@ -1,12 +1,14 @@
 <template>
   <div>
-  <RaguComponent
-      src="https://ragu-framework.github.io/ragu-vue-server-adapter/quick-start.json"
-      v-on:rendered="rendered"
-      v-on:fetched="fetched"
-      v-on:fetch-fail="fetchFail"
-  >
-  </RaguComponent>
+    <input type="text" v-bind:value="src" v-on:blur.prevent="changeRoute">
+    <RaguComponent
+        v-bind:src="src"
+        v-on:rendered="rendered"
+        v-on:fetched="fetched"
+        v-on:fetch-fail="fetchFail"
+    >
+    </RaguComponent>
+    <button v-on:click="increase">{{counter}}</button>
   </div>
 </template>
 
@@ -16,7 +18,19 @@ import RaguComponent from "./RaguComponent";
 
 export default Vue.extend({
   name: 'Demo',
+  data() {
+    return {
+      counter: 0,
+      src: 'https://ragu-framework.github.io/ragu-vue-server-adapter/quick-start.json'
+    }
+  },
   methods: {
+    increase() {
+      this.counter++;
+    },
+    changeRoute(e) {
+      this.src = e.target.value;
+    },
     rendered() {
       console.log('rendered');
     },
@@ -32,3 +46,9 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style scoped>
+  input {
+    width: 100%;
+  }
+</style>
