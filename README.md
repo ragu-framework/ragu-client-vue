@@ -18,6 +18,49 @@ A React Client for [Ragu Server - A micro-frontend framework](https://ragu-frame
 npm install ragu-client-vue
 ```
 
+## How to Use
+
+```vue
+<template>
+    <RaguComponent
+      src="https://ragu-framework.github.io/ragu-vue-server-adapter/quick-start.json"
+      v-on:rendered="rendered"
+      v-on:fetched="fetched"
+      v-on:fetch-fail="fetchFail"
+    />
+</template>
+
+<script>
+import RaguComponent from 'ragu-client-vue';
+
+export default {
+  name: 'App',
+  components: {
+    RaguComponent
+  },
+  methods: {
+    rendered() {
+      console.log('rendered');
+    },
+    fetched() {
+      console.log('fetched');
+    },
+    fetchFail() {
+      console.log('fetched-fail');
+    }
+  }
+}
+</script>
+```
+
+| Property         	| Description                                                                           	| Required 	| Default 	|
+|------------------	|---------------------------------------------------------------------------------------	|----------	|---------	|
+| src              	| The micro-frontend URL                                                                	| true     	| -       	|
+| v-on:fetched   	| A callback called when component fetch is finished.                                   	| false    	| -       	|
+| v-on:fetch-fail  	| A callback called when component fetch fails.                                         	| false    	| -       	|
+| v-on:rendered 	| A callback called when component was hydrated (it means, the render process finished) 	| false    	| -       	|
+
+
 ## Development notes
 
 ### Project setup
