@@ -18,9 +18,6 @@ jobs:
       - run: yarn install
         env:
           CI: true
-      - run: yarn clean
-        env:
-          CI: true
       - run: yarn build
         env:
           CI: true
