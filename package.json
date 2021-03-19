@@ -1,10 +1,11 @@
 {
   "name": "ragu-client-vue",
-  "version": "0.1.0",
-  "private": true,
+  "main": "dist/ragu-client-vue.umd.js",
+  "version": "0.0.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --name ragu-client-vue --entry ./src/RaguComponent.vue --target lib",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

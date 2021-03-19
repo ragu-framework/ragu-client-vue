@@ -14,7 +14,7 @@
 
 <script>
 import Vue from "vue";
-import RaguComponent from "./RaguComponent";
+import RaguComponent from "../dist/ragu-client-vue.umd";
 
 export default Vue.extend({
   name: 'Demo',
