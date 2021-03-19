@@ -1,7 +1,7 @@
 {
   "name": "ragu-client-vue",
   "main": "dist/ragu-client-vue.umd.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
