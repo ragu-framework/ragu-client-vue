@@ -1,8 +1,9 @@
 {
   "name": "ragu-client-vue",
   "main": "dist/ragu-client-vue.umd.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
+  "repository": "https://github.com/ragu-framework/ragu-client-vue.git",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --name ragu-client-vue --entry ./src/RaguComponent.vue --target lib",
