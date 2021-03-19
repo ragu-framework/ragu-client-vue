@@ -1,29 +1,32 @@
-# ragu-client-vue
+<p align="center" style="color: #343a40">
+  <p align="center" >
+    <img src="repository-assets/banner.png" alt="Ragu" align="center" style="max-width: 100%">
+  </p>
+  <h1 align="center">Ragu Client Vue</h1>
+</p>
 
-## Project setup
+![Testing](https://github.com/ragu-framework/ragu-client-vue/workflows/Testing/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![npm version](https://badge.fury.io/js/ragu-client-vue.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+A React Client for [Ragu Server - A micro-frontend framework](https://ragu-framework.github.io).
+
+## Installation
+
+```shell script
+npm install ragu-client-vue
+```
+
+## Development notes
+
+### Project setup
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
 yarn build
 ```
 
-### Run your unit tests
+#### Compiles a demo using the library
 ```
-yarn test:unit
+yarn serve
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
